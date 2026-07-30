@@ -1,0 +1,3 @@
+/* Create a /css folder structure: base.css (reset, variables, typography), layout.css (header,
+footer, grid structure), components.css (cards, buttons, forms, badges), pages.css (page-specific
+rules), and main.css that imports all four using @import */

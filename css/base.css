@@ -1,0 +1,35 @@
+/* Create a /css folder structure: base.css (reset, variables, typography), layout.css (header,
+footer, grid structure), components.css (cards, buttons, forms, badges), pages.css (page-specific
+rules), and main.css that imports all four using @import */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Add a global CSS reset */
+
+p{
+    font-size: larger;
+}
+
+:root{
+    --black:#232222;
+}
+
+
+@font-face{
+    font-family: DD-Norm-Medium;
+    src: url(https://img.cdn4dd.com/t/dd-norms/DDNorms-Medium.woff2)
+}
+
+@font-face{
+    font-family: DD-Norm-Bold;
+    src: url(https://img.cdn4dd.com/t/dd-norms/DDNorms-Bold.woff2);
+}
+
+@font-face{
+    font-family: DD-Norm-Extra-Bold;
+    src: url(https://img.cdn4dd.com/t/dd-norms/DDNorms-ExtraBold.woff2);
+}
+
+body{
+    background-color: var(--black)
+}
