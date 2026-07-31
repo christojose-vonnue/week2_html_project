@@ -1,3 +1,146 @@
 /* Create a /css folder structure: base.css (reset, variables, typography), layout.css (header,
 footer, grid structure), components.css (cards, buttons, forms, badges), pages.css (page-specific
 rules), and main.css that imports all four using @import */
+
+/* Home page grid and overlay */
+
+
+.features{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 10% 1fr;
+    gap: 15px;
+    
+    background : linear-gradient(to bottom, var(--home-gradient), transparent);
+
+    width: 100vw;
+    height: 200px;
+
+    text-align: center;
+}
+
+#features-hero-heading{
+    width:max-content;
+    grid-column: span 3 ;
+    justify-self: center;
+    text-decoration: var(--blue_border);
+    
+}
+
+.nav_bar_container{
+    display: flex;
+    min-height: 50px;
+    align-items: center;
+    background-color: var(--nav-gradient);
+
+}
+
+footer{
+    padding-top: 50px;
+    text-align: center;
+}
+header{
+    position: sticky;
+    top: 0;
+}
+
+.tab{
+    width: 20vw;
+    text-align: center;
+}
+
+.tab:hover{
+    background-color:var(--nav-gradient-2);
+}
+
+#home h1{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+
+.testimonials{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.testimonials h2{
+    width: 100vw;
+    text-align: center;
+}
+
+.testimonials div{
+    max-width: 33%;
+    height: auto;
+}
+
+#about h1,h2,header{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+
+
+header dl{
+    text-align: justify;
+  
+    align-content: center;
+    padding-bottom: 20px;
+    list-style:none;
+    display: flex;
+    flex-wrap: wrap;
+
+    
+}
+
+dd{
+    width: 50vw;
+    padding-left: 50px;
+    display: block;
+    padding-right: 0vw;
+}
+
+dt{
+    padding-left: 10px;
+}
+
+#values{
+    display: grid;
+    grid-template-columns: 1fr repeat(3,2fr);
+    grid-template-rows: 50px 1fr;
+    grid-template-areas: "head head head head"
+    "aside care emp com";
+    gap:20px
+}
+#values-header{
+    grid-row: span 4;
+    grid-area: head;
+    padding-top: 30px;
+    
+}
+#care{
+    grid-area: care;
+    border: double 2px cyan;
+    padding: 10px;
+    border-radius: 20px;
+}
+#empowerment{
+    grid-area: emp;
+    border: dashed 2px violet;
+    padding: 10px;
+    border-radius: 20px;
+}
+#community{
+    grid-area: com;
+    border: double 2px cyan;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#values aside{
+    border-right: solid 3px salmon;
+}
+
+
+
+

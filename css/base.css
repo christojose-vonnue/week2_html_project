@@ -5,13 +5,22 @@ rules), and main.css that imports all four using @import */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 /* Add a global CSS reset */
+#home{
+    height: 200vh;
+    padding: 0;
+}
+
 
 p{
     font-size: larger;
 }
 
 :root{
-    --black:#232222;
+    --black:#0f0f0f;
+    --blue_border:#8484E1;
+    --home-gradient:rgba(79, 15, 85, 0.7);
+    --nav-gradient:#167392;
+    --nav-gradient-2:#0D3C4A;
 }
 
 
@@ -31,5 +40,18 @@ p{
 }
 
 body{
-    background-color: var(--black)
+    background-color: var(--black);
+    color : white;
+  
 }
+
+.nav_bar_container a{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+a{ color: aqua;}
+a:hover{color : violet}
+/* 
+274.​ Move your design system custom properties and type scale into base.css */

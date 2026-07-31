@@ -1,3 +1,58 @@
 /* Create a /css folder structure: base.css (reset, variables, typography), layout.css (header,
 footer, grid structure), components.css (cards, buttons, forms, badges), pages.css (page-specific
 rules), and main.css that imports all four using @import */
+
+
+.timeline{
+    display: flex;
+    width: 2px;
+    border: solid 2px cyan;
+    height: 180px;
+    margin-right: 10px;
+    margin-left: 40%;
+}
+
+
+#pullquote{
+    margin-top: 30px;
+    border: solid 2px salmon;
+    width: fit-content;
+    text-align: center;
+    padding: 20px;
+    margin-left: 35%;
+    border-radius: 30px;
+}
+
+#right-quote{
+   margin-left: 50%;
+   font-size: 70px;
+   font-style: italic;
+  
+}
+
+#left-quote{
+    margin-right: 50%;
+    font-size: 70px;
+   font-style: italic;
+}
+
+#pullquote blockquote{
+    max-width: 500px;
+    
+}
+
+@media (width <= 480px) {
+    .timeline{
+        margin-left:10%;
+    }
+
+    
+}
+
+@media (width<=768px) {
+    #pullquote{
+            margin-left: 15%;
+    }
+    
+}
+
