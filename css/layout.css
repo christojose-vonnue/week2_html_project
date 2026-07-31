@@ -218,7 +218,7 @@ tr:nth-child(even){
 }
 
 tr:nth-child(even) td:nth-child(3){
-    background-color: var(--tabel-feature1); 
+    background-color: var(--table-feature1); 
 }
 
 tr:nth-child(odd) td:nth-child(3){

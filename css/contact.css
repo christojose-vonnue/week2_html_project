@@ -67,32 +67,6 @@ header dl{
 #values h2{margin-left: 45vw;}
 
 
-/* Imported from minimal-css */
-
-
-table {
-  border-collapse: collapse;
-  border: 2px solid #b785e5;
-  letter-spacing: 1px;
-  font-size: 0.8rem;
-}
-
-td, th {
-  border: 1px solid #9074aa;
-  padding: 10px 20px;
-}
-
-th {
-  background-color: #6a3786;
-  color: #f5f4f6;
-}
-
-td {
-  text-align: center;
-   background-color: #e8daf6;
-   color : black;
-}
-
 
 caption {
   padding: 10px;

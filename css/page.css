@@ -74,29 +74,6 @@ rules), and main.css that imports all four using @import */
 /* Imported from minimal-css */
 
 
-table {
-  border-collapse: collapse;
-  border: 2px solid #b786e5;
-  letter-spacing: 1px;
-  font-size: 0.8rem;
-}
-
-td, th {
-  border: 1px solid #9075aa;
-  padding: 10px 20px;
-}
-
-th {
-  background-color: #6b3786;
-  color: #f6f5f7;
-}
-
-td {
-  text-align: center;
-   background-color: #e8dbf6;
-   color : black;
-}
-
 caption {
   padding: 10px;
   font-size: larger;
