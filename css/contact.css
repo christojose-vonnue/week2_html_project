@@ -1,0 +1,235 @@
+header nav ul {
+    list-style-type:none;
+    padding: 0;
+    margin : 0 ; 
+}
+header nav li {display:inline-block;
+                margin-right:15px;}
+
+article hr{ border:none;
+            border-top: 1px dashed #312526;}
+
+body{
+    background-color: black;
+    color: aliceblue;
+}
+
+a{
+    color:aqua
+}
+
+a:hover{
+    color:aquamarine
+}
+
+h1{
+    margin-left : 40vw ;
+}
+hr{border-width: 2px;}
+
+.features em{
+    color:  rgb(235, 167, 59);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.features h3{
+    color : rgb(252, 204, 142);
+}
+
+.testimonials h2{
+    color: rgb(95, 226, 65);
+}
+
+.testimonials h3{
+    color: rgb(197, 228, 181);
+}
+
+footer{
+    margin-left: 40vw;
+    margin-top: 5vw;
+}
+
+header p{
+    text-align: center;
+    text-justify: auto;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+header dl{
+    
+    margin-left: 38vw;
+    margin-right: 10vw; 
+}
+
+#values h2{margin-left: 45vw;}
+
+
+/* Imported from minimal-css */
+
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(183, 134, 229);
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+td, th {
+  border: 1px solid rgb(144, 117, 170);
+  padding: 10px 20px;
+}
+
+th {
+  background-color: rgb(107, 55, 134);
+  color: rgb(246, 245, 247);
+}
+
+td {
+  text-align: center;
+   background-color: rgb(232, 219, 246);
+   color : black;
+}
+
+
+caption {
+  padding: 10px;
+  font-size: larger;
+}
+
+figure {
+            display: inline-block;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            margin-left: 40px;
+            margin-right: 40px;
+            
+        }
+figure img{
+    border-radius: 15px;
+}
+
+.required {
+    color:rgb(81, 255, 0);
+}
+
+textarea{
+    width:25vw;
+    height:20vw;
+}
+
+fieldset{
+    margin-top: 3vw;
+    margin-left: 35vw;
+    margin-right: 50vw;
+}
+
+.contact{
+    margin-top: 3vw;
+    margin-left: 35vw;
+    margin-right: 0vw;
+
+}
+/**************************************/
+.contact-form{
+    display: grid;
+    grid-template-columns: fit-content;
+    grid-template-rows: fit-content;
+    width: 450px;
+
+}
+
+.contact-form label:hover{
+    animation-name:float;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes float {
+
+    0%{
+        
+        translate: 0px 0px;
+       font-size: 19.2px;
+    }
+    25%{
+        color: var(--accent1);
+     
+        font-size: 20.2px;
+    }
+    50%{
+        color: var(--accent2);
+    
+         font-size: 19.2px;
+    }    
+    75%{
+        color: var(--accent3);
+      
+        font-size: 20.2px;
+    }
+    100%{
+        color: var(--white);
+        font-size: 19.2px;
+    }
+    
+}
+
+/* .custom-select select option:hover{
+    background-color: var(--accent3);
+} */
+
+/* Styling the select element itself */
+.custom-select select {
+    padding: 8px;
+    border-radius: 4px;
+}
+
+/* Background color for options (hover state cannot be styled natively) */
+.custom-select select option {
+    background-color: var(--accent3);
+    color: var(--black);
+}
+
+.fields{
+    padding-top: 20px;
+    font-size: 19.9px;
+}
+
+.fields input{
+    height: 25px;
+}
+
+.fields input:user-invalid{
+    outline: solid 2px red;
+}
+
+.fields input:valid{
+    
+    background-color: rgb(209, 235, 209);
+}
+
+.fields input[type=checkbox]{
+    width: 20px;
+    height: 20px;
+
+    accent-color: var(--accent1);
+    cursor: pointer;
+}
+
+.fields input[type=checkbox]:hover{
+    accent-color: var(--accent2);
+}
+
+.contact-form button{
+    width: 80px;
+    height: 30px;
+    font-size: larger;
+    font-weight: 600;
+}
+
+address iframe{
+    border-radius: 9999px;
+}
+
+
+

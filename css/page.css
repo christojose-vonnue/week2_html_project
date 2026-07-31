@@ -1,3 +1,271 @@
 /* Create a /css folder structure: base.css (reset, variables, typography), layout.css (header,
 footer, grid structure), components.css (cards, buttons, forms, badges), pages.css (page-specific
 rules), and main.css that imports all four using @import */
+
+#team header nav ul {
+    list-style-type:none;
+    padding: 0;
+    margin : 0 ; 
+}
+#team header nav li {display:inline-block;
+                margin-right:15px;}
+
+#team article hr{ border:none;
+            border-top: 1px dashed #312526;}
+
+#team body{
+    background-color: black;
+    color: aliceblue;
+}
+
+#team a{
+    color:rgb(252, 252, 252)
+}
+
+#team a:hover{
+    color:violet;
+}
+
+#team h1{
+    margin-left : 40vw ;
+}
+#team hr{border-width: 2px;}
+
+#team .features em{
+    color:  rgb(235, 167, 59);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#team .features h3{
+    color : rgb(252, 204, 142);
+}
+
+#team .testimonials h2{
+    color: rgb(95, 226, 65);
+}
+
+#team .testimonials h3{
+    color: rgb(197, 228, 181);
+}
+
+#team footer{
+
+    margin-top: 5vw;
+}
+
+#team header p{
+    text-align: center;
+    text-justify: auto;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+#team header dl{
+    
+    margin-left: 38vw;
+    margin-right: 10vw; 
+}
+
+#team #values h2{margin-left: 45vw;}
+
+
+/* Imported from minimal-css */
+
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(183, 134, 229);
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+td, th {
+  border: 1px solid rgb(144, 117, 170);
+  padding: 10px 20px;
+}
+
+th {
+  background-color: rgb(107, 55, 134);
+  color: rgb(246, 245, 247);
+}
+
+td {
+  text-align: center;
+   background-color: rgb(232, 219, 246);
+   color : black;
+}
+
+
+caption {
+  padding: 10px;
+  font-size: larger;
+}
+
+#team figure {
+            display: inline-block;
+           
+            margin-bottom: 1em;
+            margin-left: 40px;
+            margin-right: 40px;
+            margin-top: 20px;
+            
+        }
+#team figure img{
+    border-radius: 50%;  /* 254 : Circular Radius */
+}
+
+#team .required {
+    color:rgb(81, 255, 0);
+}
+
+#team textarea{
+    width:25vw;
+    height:20vw;
+}
+
+#team fieldset{
+    margin-top: 3vw;
+    margin-left: 35vw;
+    margin-right: 50vw;
+}
+
+#team .contact{
+        margin-top: 3vw;
+    margin-left: 35vw;
+    margin-right: 0vw;
+
+}
+
+#team .Icon-row img{
+    border:40px;
+    height:40px;
+}
+
+#team .Icon-row{
+    display: flex;
+    padding-right: 30px;
+    justify-content: space-evenly;
+    opacity: 0;
+
+}
+#team .Icon-row:hover{
+    animation-name: bring;
+    animation-duration: .5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+/**HELP NEEDED**
+
+1. I need to add two distinct animations to same psedo class figure:hover
+2. 
+
+**/
+
+#team .dev-grid{
+    display: none;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    text-align: center;
+
+}
+#team #qa:target{
+    display: grid;
+}
+
+#team #hide{
+    display: none;
+}
+
+
+#team .qa-grid{
+    
+    display: none;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    text-align: center;
+
+
+}
+
+#team .qa-grid figure:hover,.dev-grid figure:hover{
+    animation-name: box-lift;
+    animation-duration: .5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+
+
+}
+
+#team .filter{
+    margin-left: clamp(10px,30vw,1000px);
+    display: flex;
+    padding-left: 10px;
+    padding-right:10px;
+    justify-content: space-around;
+    width: 30vw;
+}
+
+#team .filter a{
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 16px;
+    background-color: cyan;
+    color: black;
+    text-align: center;
+}
+
+#team .filter a:hover{
+    background-color: rgba(255, 255, 255, 0.747);
+}
+
+#team #dev:target{
+    display: grid;
+}
+
+@keyframes bring {
+
+    100%{
+        opacity: 1.0;
+    }
+    
+}
+@keyframes box-lift {
+
+    100%{
+        
+        box-shadow: 0px 0px 4px 4px tan;
+    }
+
+}
+
+
+@media ( width < 1140px ){
+#team .dev-grid,#team .qa-grid{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+#team footer{
+    margin-left: 30vw;
+}
+#team .filter{
+    flex-direction: column;
+}
+#team .filter a{
+    margin-top: 10px;
+}
+}
+
+
+@media ( width < 570px ){
+#team .dev-grid,#team .qa-grid{
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(6,1fr);
+}
+#team footer{
+    margin-left: 15vw;
+}
+}
+
