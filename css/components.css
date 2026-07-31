@@ -64,28 +64,23 @@ rules), and main.css that imports all four using @import */
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
     gap:30px;
-    
     grid-template-areas: "article-one-mvp   article-two-custom    article-three-design";
     
     @media (width<900px){
-
         grid-template-columns: 1fr;
         grid-template-areas: 
         "article-one-mvp"
         "article-two-custom"
         "article-three-design";
     }
-
+    
     @media (width<420px){
-
-
-        td, th {
- 
-  padding: 0px;
+    td,th{
+padding: 0;
 }
-
     }
 }
+
 #services .dynamic-cards li{
     margin-left: 20%;
     text-align: left;
@@ -95,19 +90,19 @@ rules), and main.css that imports all four using @import */
 
 
 
-/* C2A */
+/* c2a */
 
-#services .C2A{
+#services .c2a{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "C2A-text C2A-form";
+    grid-template-areas: "c2a-text c2a-form";
     border: solid 2px var(--black);
 
     @media (width<480px){
         grid-template-columns: 1fr;
         grid-template-areas: 
-        "C2A-text "
-         "C2A-form";
+        "c2a-text "
+         "c2a-form";
     }
 }
 

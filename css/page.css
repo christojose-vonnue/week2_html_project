@@ -7,8 +7,12 @@ rules), and main.css that imports all four using @import */
     padding: 0;
     margin : 0 ; 
 }
+
 #team header nav li {display:inline-block;
-                margin-right:15px;}
+                margin-right:15px;
+            }
+
+#team hr{border-width: 2px;}
 
 #team article hr{ border:none;
             border-top: 1px dashed #312526;}
@@ -19,37 +23,36 @@ rules), and main.css that imports all four using @import */
 }
 
 #team a{
-    color:rgb(252, 252, 252)
+    color:#fcfcfc
 }
 
 #team a:hover{
-    color:violet;
+    color:#ee82ee;
 }
 
 #team h1{
     margin-left : 40vw ;
 }
-#team hr{border-width: 2px;}
+
 
 #team .features em{
-    color:  rgb(235, 167, 59);
+    color:  #eba73b;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #team .features h3{
-    color : rgb(252, 204, 142);
+    color : #fccc8e;
 }
 
 #team .testimonials h2{
-    color: rgb(95, 226, 65);
+    color: #5fe241;
 }
 
 #team .testimonials h3{
-    color: rgb(197, 228, 181);
+    color: #c5e4b5;
 }
 
 #team footer{
-
     margin-top: 5vw;
 }
 
@@ -61,7 +64,6 @@ rules), and main.css that imports all four using @import */
 }
 
 #team header dl{
-    
     margin-left: 38vw;
     margin-right: 10vw; 
 }
@@ -74,48 +76,60 @@ rules), and main.css that imports all four using @import */
 
 table {
   border-collapse: collapse;
-  border: 2px solid rgb(183, 134, 229);
+  border: 2px solid #b786e5;
   letter-spacing: 1px;
   font-size: 0.8rem;
 }
 
 td, th {
-  border: 1px solid rgb(144, 117, 170);
+  border: 1px solid #9075aa;
   padding: 10px 20px;
 }
 
 th {
-  background-color: rgb(107, 55, 134);
-  color: rgb(246, 245, 247);
+  background-color: #6b3786;
+  color: #f6f5f7;
 }
 
 td {
   text-align: center;
-   background-color: rgb(232, 219, 246);
+   background-color: #e8dbf6;
    color : black;
 }
-
 
 caption {
   padding: 10px;
   font-size: larger;
 }
 
+.dev-grid figure:hover{
+    animation-name: box-lift;
+    animation-duration: .5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+
+}
+
 #team figure {
             display: inline-block;
-           
-            margin-bottom: 1em;
-            margin-left: 40px;
-            margin-right: 40px;
-            margin-top: 20px;
-            
+            margin: 20px 40px 1em; 
         }
+
+
+#team .qa-grid figure:hover{
+    animation-name: box-lift;
+    animation-duration: .5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+
 #team figure img{
     border-radius: 50%;  /* 254 : Circular Radius */
 }
 
 #team .required {
-    color:rgb(81, 255, 0);
+    color:#51ff00;
 }
 
 #team textarea{
@@ -132,42 +146,42 @@ caption {
 #team .contact{
         margin-top: 3vw;
     margin-left: 35vw;
-    margin-right: 0vw;
-
+    margin-right: 0;
 }
 
-#team .Icon-row img{
+#team .icon-row img{
     border:40px;
     height:40px;
 }
 
-#team .Icon-row{
+#team .icon-row{
     display: flex;
     padding-right: 30px;
     justify-content: space-evenly;
     opacity: 0;
-
 }
-#team .Icon-row:hover{
+
+#team .icon-row:hover{
     animation-name: bring;
     animation-duration: .5s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
 }
-/**HELP NEEDED**
+
+/* *HELP NEEDED**
 
 1. I need to add two distinct animations to same psedo class figure:hover
 2. 
 
-**/
+* */
 
 #team .dev-grid{
     display: none;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(2,1fr);
     text-align: center;
-
 }
+
 #team #qa:target{
     display: grid;
 }
@@ -176,24 +190,11 @@ caption {
     display: none;
 }
 
-
 #team .qa-grid{
-    
     display: none;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(2,1fr);
     text-align: center;
-
-
-}
-
-#team .qa-grid figure:hover,.dev-grid figure:hover{
-    animation-name: box-lift;
-    animation-duration: .5s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-
-
 }
 
 #team .filter{
@@ -207,10 +208,7 @@ caption {
 
 #team .filter a{
     text-decoration: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding: 8px 10px;
     border-radius: 16px;
     background-color: cyan;
     color: black;
@@ -218,7 +216,7 @@ caption {
 }
 
 #team .filter a:hover{
-    background-color: rgba(255, 255, 255, 0.747);
+    background-color: #ffffffbe;
 }
 
 #team #dev:target{
@@ -226,19 +224,15 @@ caption {
 }
 
 @keyframes bring {
-
     100%{
         opacity: 1.0;
     }
-    
 }
+
 @keyframes box-lift {
-
-    100%{
-        
-        box-shadow: 0px 0px 4px 4px tan;
+    100%{ 
+        box-shadow: 0 0 4px 4px tan;
     }
-
 }
 
 
@@ -247,15 +241,19 @@ caption {
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(3,1fr);
 }
+
 #team footer{
     margin-left: 30vw;
 }
+
 #team .filter{
     flex-direction: column;
 }
+
 #team .filter a{
     margin-top: 10px;
 }
+
 }
 
 
@@ -264,6 +262,7 @@ caption {
     grid-template-columns: repeat(1,1fr);
     grid-template-rows: repeat(6,1fr);
 }
+
 #team footer{
     margin-left: 15vw;
 }
@@ -272,15 +271,14 @@ caption {
 
 
 @media (prefers-reduced-motion: no-preference) {
-#about_h1{
-
+#about-h1{
     animation-name: fade-in;
     animation-duration:2s;
     animation-timing-function:ease;
     animation-iteration-count: 1;
 }
-#about_p{
 
+#about-p{
     animation-name: fade-in;
     animation-duration:3s;
     animation-timing-function:ease-in;
@@ -288,8 +286,8 @@ caption {
     animation-delay: 2s;
     animation-fill-mode: backwards;
 }
-.timeline{
 
+.timeline{
     animation-name: fade-in;
     animation-duration:3s;
     animation-timing-function:ease;
@@ -297,8 +295,8 @@ caption {
     animation-delay: 5s;
     animation-fill-mode: backwards;
 }
-#pull_quote{
 
+#pull-quote{
     animation-name: fade-in;
     animation-duration:3s;
     animation-timing-function:ease;
@@ -306,8 +304,8 @@ caption {
     animation-delay: 8s;
     animation-fill-mode: backwards;
 }
-#about_main{
 
+#about-main{
     animation-name: fade-in;
     animation-duration:3s;
     animation-timing-function:ease;
@@ -316,7 +314,7 @@ caption {
     animation-fill-mode: backwards;
 }
 
-#about_footer{
+#about-footer{
     animation-name:fade-in;
     animation-duration:3s;
     animation-timing-function:ease;
@@ -325,38 +323,40 @@ caption {
     animation-fill-mode: backwards;   
 }
 
-#contact_main{
+#contact-main{
     animation-name: fade-in;
     animation-duration:2s;
     animation-timing-function:ease;
     animation-iteration-count: 1;
 }
 
-#index_main{
+#index-main{
         animation-name: fade-in;
     animation-duration:2s;
     animation-timing-function:ease;
     animation-iteration-count: 1;
 }
 
-#services_main{
+#services-main{
             animation-name: fade-in;
     animation-duration:2s;
     animation-timing-function:ease;
     animation-iteration-count: 1;
 }
 
-#main_team{
+#main-team{
               animation-name: fade-in;
     animation-duration:2s;
     animation-timing-function:ease;
     animation-iteration-count: 1;  
 }
+
 @keyframes fade-in{
     0%{
         translate : 0 100vh;
         opacity: 0;
     }
+
     100%{
         translate: 0 0;
         opacity: 1.0;

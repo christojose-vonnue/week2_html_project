@@ -2,9 +2,24 @@
 footer, grid structure), components.css (cards, buttons, forms, badges), pages.css (page-specific
 rules), and main.css that imports all four using @import */
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*{ box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+*::before { box-sizing:
+     border-box; 
+     margin: 0; 
+     padding: 0;
+     }
+
+*::after { box-sizing: border-box;
+     margin: 0; 
+     padding: 0; 
+    }
 
 /* Add a global CSS reset */
+
 #home{
     height: 200vh;
     padding: 0;
@@ -16,16 +31,15 @@ p{
 }
 
 :root{
-    --black:#0f0f0f;
-    --white:#ffffff;
-    --blue_border:#8484E1;
-    --home-gradient:rgba(79, 15, 85, 0.7);
+    --black:#000;
+    --white:#fff;
+    --blue-border:#8484E1;
+    --home-gradient:#4f0f55b3;
     --nav-gradient:#167392;
     --nav-gradient-2:#0D3C4A;
     --accent1:cyan;
     --accent2:violet;
     --accent3:#fa8072;
-
     --table-stripe:#2e3235;
     --tabel-feature1:#574c11;
     --table-feature2:#c5af30;
@@ -34,17 +48,17 @@ p{
 
 @font-face{
     font-family: DD-Norm-Medium;
-    src: url(https://img.cdn4dd.com/t/dd-norms/DDNorms-Medium.woff2)
+    src: url("https://img.cdn4dd.com/t/dd-norms/DDNorms-Medium.woff2")
 }
 
 @font-face{
     font-family: DD-Norm-Bold;
-    src: url(https://img.cdn4dd.com/t/dd-norms/DDNorms-Bold.woff2);
+    src: url("https://img.cdn4dd.com/t/dd-norms/DDNorms-Bold.woff2");
 }
 
 @font-face{
     font-family: DD-Norm-Extra-Bold;
-    src: url(https://img.cdn4dd.com/t/dd-norms/DDNorms-ExtraBold.woff2);
+    src: url("https://img.cdn4dd.com/t/dd-norms/DDNorms-ExtraBold.woff2");
 }
 
 body{
@@ -53,13 +67,16 @@ body{
   
 }
 
-.nav_bar_container a{
+a{ color: aqua;}
+
+.nav-bar-container a{
     color: white;
     font-size: 18px;
     text-decoration: none;
 }
 
-a{ color: aqua;}
+
 a:hover{color : violet}
+
 /* 
 274.​ Move your design system custom properties and type scale into base.css */
