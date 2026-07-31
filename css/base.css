@@ -17,10 +17,18 @@ p{
 
 :root{
     --black:#0f0f0f;
+    --white:#ffffff;
     --blue_border:#8484E1;
     --home-gradient:rgba(79, 15, 85, 0.7);
     --nav-gradient:#167392;
     --nav-gradient-2:#0D3C4A;
+    --accent1:cyan;
+    --accent2:violet;
+    --accent3:#fa8072;
+
+    --table-stripe:#2e3235;
+    --tabel-feature1:#574c11;
+    --table-feature2:#312c0f
 }
 
 

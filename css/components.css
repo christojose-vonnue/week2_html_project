@@ -46,7 +46,7 @@ rules), and main.css that imports all four using @import */
         margin-left:10%;
     }
 
-    
+
 }
 
 @media (width<=768px) {
@@ -54,5 +54,60 @@ rules), and main.css that imports all four using @import */
             margin-left: 15%;
     }
     
+}
+
+
+/******************** Services.html **************************/
+
+#services .dynamic-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    gap:30px;
+    
+    grid-template-areas: "article-one-mvp   article-two-custom    article-three-design";
+    
+    @media (width<900px){
+
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "article-one-mvp"
+        "article-two-custom"
+        "article-three-design";
+    }
+
+    @media (width<420px){
+
+
+        td, th {
+ 
+  padding: 0px;
+}
+
+    }
+}
+#services .dynamic-cards li{
+    margin-left: 20%;
+    text-align: left;
+    padding-left: 20px;
+    
+}
+
+
+
+/* C2A */
+
+#services .C2A{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "C2A-text C2A-form";
+    border: solid 2px var(--black);
+
+    @media (width<480px){
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "C2A-text "
+         "C2A-form";
+    }
 }
 
