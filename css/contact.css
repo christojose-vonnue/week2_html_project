@@ -10,45 +10,41 @@ header nav li {display:inline-block;
 hr{border-width: 2px;}
 
 article hr{ border:none;
-            border-top: 1px dashed #312526;}
+            border-top: 1px dashed var(--light-black);}
 
 body{
-    background-color: black;
-    color: aliceblue;
+    background-color: var(--black);
+    color: var(--white);
 }
 
 a{
-    color:aqua
+    color:var(--cyan)
 }
 
 a:hover{
-    color:aquamarine
-}
-
-h1{
-    margin-left : 40vw ;
+    color:var(--cyan)
 }
 
 
 .features em{
-    color:  #eba83d;
+    color:  var(--orange);
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .features h3{
-    color : #fccc8d;
+    color : var(--light-orange);
 }
 
 .testimonials h2{
-    color: #5ee240;
+    color: var(--required-green);
 }
 
 .testimonials h3{
-    color: #c4e4b4;
+    color: var(--light-green);
 }
 
 footer{
-    margin-left: 40vw;
+    text-align: center;
     margin-top: 5vw;
 }
 
@@ -83,7 +79,7 @@ figure img{
 }
 
 .required {
-    color:#51ff00;
+    color: var(--required-green);
 }
 
 textarea{
@@ -93,22 +89,27 @@ textarea{
 
 fieldset{
     margin-top: 3vw;
-    margin-left: 35vw;
-    margin-right: 50vw;
 }
 
-.contact{
+.contact {
+    flex-direction: column;
     margin-top: 3vw;
-    margin-left: 35vw;
+    display: flex;
     margin-right: 0;
+    width: fit-content;
+}
 
+.contact-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 /* ************************************ */
 
 .contact-form{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-rows: 1fr;
     width: 450px;
 
@@ -142,7 +143,7 @@ fieldset{
     }
 
     100%{
-        color: var(--white);
+        color: var(--var(--white));
         font-size: 19.2px;
     }
     
@@ -174,11 +175,33 @@ fieldset{
 }
 
 .fields input:user-invalid{
-    outline: solid 2px red;
+    outline: solid 2px red; /* constant color */
 }
 
-.fields input:valid{
-    background-color: #d1ebd1;
+.formoverlay-on{
+    width: 100%;
+    height: 100%;
+    background-color: var(--dim-black);
+    animation-name: load;
+    animation-duration: 1.5s;
+}
+
+.toast-on{
+    display: block;
+    background-color: darkgreen;
+    font-size: 20px;
+    color: white;
+}
+
+.toast-off{
+    display: none;
+}
+
+@keyframes load {
+    50%{
+        background-color: var(--black)
+    }  
+
 }
 
 .fields input[type="checkbox"]{
@@ -203,5 +226,9 @@ address iframe{
     border-radius: 9999px;
 }
 
+#hamburger{
+    font-size: 30px;
+
+}
 
 

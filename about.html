@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -24,8 +24,11 @@
 
     
 
-        
+    <!-- <script src="../Day1/darkmode.js" defer></script> -->
+     <script src="js/components/blog.js" type="module">  </script>
+    <script src="js/main.js" type="module"></script>
     
+    <!-- <script src="js/components/hamburger.js" defer></script> -->
 </head>
 
 
@@ -34,40 +37,52 @@
     <nav aria-label="Navigation">
         <div class="nav-bar-container">
             
-            <div class="tab"><a href="index.html" aria-current="page">Home</a></div>
-            <div class="tab"><a href="about.html">About</a></div>
-            <div class="tab"><a href="contact.html">Contact</a></div>
-            <div class="tab"><a href="services.html">Services</a></div>
-            <div class="tab"><a href="team.html">Team</a></div>
+            <div class="tab" id="hamburgerdiv"  aria-expanded="false"><button href="#" id="hamburger"> ≡ </button> </div>
+            <div class="center-nav" id="close"> 
+                <div class="tab"><a href="index.html" id="temp">Home</a></div>
+                <div class="tab"><a href="about.html">About</a></div>
+                <div class="tab"><a href="contact.html">Contact</a></div>
+                <div class="tab"><a href="services.html">Services</a></div>
+                <div class="tab"><a href="team.html">Team</a></div>
+                <div class="tab"><a href="blog.html">Blog</a></div>
+            </div>
+                      <div class="theme-div" ><button id="toggle_btn" aria-pressed="dark-mode">🌙</button></div>
 
         </div>
-    </nav></header>
-    <h1 id="about-h1">Who are we?</h1>
-    
-    
-    
-    <p id="about-p">From our roots in the serene hills of Wayanad to making an impact on a global stage, Vonnue thrives on innovation, sustainability, and collaboration. Our journey is built on challenging conventions, embracing continuous learning, and delivering excellence in every project.<br>
-
-Explore how we blend purpose-driven technology, local dedication, and global aspirations to create meaningful digital solutions. See how we care — for our team, clients, and the environment — every step of the way.
-<br>Here are some of our Milestones...<br></p>
-<div class="timeline">
-<dl>
-       
-        <dt><strong>2016</strong></dt><dd><strong>Established Vonnue Innovations</strong></dd>
-        <dt><strong>2018</strong></dt><dd><strong>Expanded to Singapore</strong></dd>
-        <dt><strong>2022</strong></dt><dd><strong>Global Customers as Bosch, Grab</strong></dd>
-        <dt><strong>2026</strong></dt><dd><strong>Expanded to 250+ Employees</strong></dd>
-    </dl>
-</div>
-
-<section id="pullquote">
-            <span id="left-quote">"</span>
-            <h2>Mission Statement</h2>
-            <blockquote cite="https://vonnue.com/">Partnering with visionary startups and leading enterprises we harness our full-cycle digital expertise to shape brands, design experiences, and build products that drive growth and transformation — impacting millions, every day.</blockquote>
-            <span id="right-quote">"</span>
-</section>
-
+        
+    </nav>
+    <div id="indicator"></div>
+    </header>
+    <div id="mainoverlay-off">
+        <button id="down">⇑</button>
     <main id="about-main">
+        <h1 id="about-h1">Who are we?</h1>
+        <p id="about-p">From our roots in the serene hills of Wayanad to making an impact 
+            on a global stage, Vonnue thrives on innovation, sustainability,
+             and collaboration. Our journey is built on challenging conventions, 
+             embracing continuous learning, and delivering excellence in every project.<br>
+            Explore how we blend purpose-driven technology, local dedication, and global aspirations to
+             create meaningful digital solutions. See how we care — for our team, clients, 
+             and the environment — every step of the way.
+            <br>Here are some of our Milestones...<br>
+        </p>
+        <div class="timeline">
+            <dl>
+                <dt><strong>2016</strong></dt><dd><strong>Established Vonnue Innovations</strong></dd>
+                <dt><strong>2018</strong></dt><dd><strong>Expanded to Singapore</strong></dd>
+                <dt><strong>2022</strong></dt><dd><strong>Global Customers as Bosch, Grab</strong></dd>
+                <dt><strong>2026</strong></dt><dd><strong>Expanded to 250+ Employees</strong></dd>
+            </dl>
+        </div>
+
+        <section id="pullquote">
+                    <span id="left-quote">"</span>
+                    <h2>Mission Statement</h2>
+                    <blockquote cite="https://vonnue.com/">Partnering with visionary startups and leading enterprises we harness our full-cycle digital expertise to shape brands, design experiences, and build products that drive growth and transformation — impacting millions, every day.</blockquote>
+                    <span id="right-quote">"</span>
+        </section>
+
+
 
         <section id="values">
 
@@ -77,8 +92,8 @@ Explore how we blend purpose-driven technology, local dedication, and global asp
                 <h3>We Care for People</h3>
                 <div>
                     <p>
-People are at the heart of Vonnue. We believe in creating a supportive and inclusive environment where every team member feels valued and empowered to reach their full potential.
- Our commitment to people goes beyond our office walls — we invest in our local community in Wayanad, providing opportunities for growth, education, and sustainable employment.</p>
+                    People are at the heart of Vonnue. We believe in creating a supportive and inclusive environment where every team member feels valued and empowered to reach their full potential.
+                    Our commitment to people goes beyond our office walls — we invest in our local community in Wayanad, providing opportunities for growth, education, and sustainable employment.</p>
                 </div>
 
             </article>
@@ -124,7 +139,7 @@ People are at the heart of Vonnue. We believe in creating a supportive and inclu
      <footer id="about-footer">
         <p><em>Created for educational purposes only</em></p>
     </footer>
-
+    </div>
 
 </body>
 </html>

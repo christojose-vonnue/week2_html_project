@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,9 +25,12 @@
     <meta property="og:url" content="https://vonnue.com/">
     <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9fi1X-2LTp4uDwt6PGq8p9LUmB8_YIUsiHZwf71DoZg&s=10">
 
-    
-
-        
+        <!-- <script src="../Day1/darkmode.js" defer></script> -->
+         
+         
+    <script src="js/components/Servicesfilter.js" type="module"></script>
+    <script src="js/components/blog.js" type="module">  </script>
+    <script src="js/main.js" type="module"></script>
     
 </head>
 
@@ -36,17 +39,36 @@
     <nav aria-label="Navigation">
         <div class="nav-bar-container">
             
-            <div class="tab"><a href="index.html" aria-current="page">Home</a></div>
-            <div class="tab"><a href="about.html">About</a></div>
-            <div class="tab"><a href="contact.html">Contact</a></div>
-            <div class="tab"><a href="services.html">Services</a></div>
-            <div class="tab"><a href="team.html">Team</a></div>
-
+             <div class="tab" id="hamburgerdiv"  aria-expanded="false"><button href="#" id="hamburger"> ≡ 
+ 
+            </button> 
         </div>
-    </nav></header>
+            <div class="center-nav" id="close"> 
+                <div class="tab"><a href="index.html">Home</a></div>
+                <div class="tab"><a href="about.html" id="temp">About</a></div>
+                <div class="tab"><a href="contact.html">Contact</a></div>
+                <div class="tab"><a href="services.html">Services</a></div>
+                <div class="tab"><a href="team.html">Team</a></div>
+                <div class="tab"><a href="blog.html">Blog</a></div>
+            </div>
+            <div class="theme-div" ><button id="toggle_btn" aria-pressed="dark-mode">🌙</button></div>
+            
+        </div>
+        
+    </nav>
+    <div id="indicator"></div>
+    <div id="search-bar">
+        <label for="search">Search Services..</label>
+        <input type="text" id="search"> 
+        <button id="content-x">X</button>
+    </div>
+    <div id="no-matches-text">!No matches  </div>
+    </header>
+    <div id="mainoverlay-off"> 
+        <button id="down">⇑</button>
     <main id="services-main">
-        <h1>Our Services</h1>
-<div class="dynamic-cards">
+        <h1>Our Services <button id="add-fictional-services">Add</button></h1>
+<div class="dynamic-cards" id="article-container">
         <article id="article-one-mvp">
             <h2>MVP Development</h2>
         <p>Turn your vision into a Minimum Viable Product that delivers real value
@@ -96,11 +118,14 @@ needs, accelerate growth, and enhance operational efficiency and Leverage our ex
     <li>Tech-Driven Design</li>
     
 </ol>
+
 <a href="https://vonnue.com/contact">Connect with our Team</a><br>
 
 
 <br><br>
         </article>
+
+
 </div>
 
 
@@ -207,6 +232,44 @@ needs, accelerate growth, and enhance operational efficiency and Leverage our ex
 <input type=text id="demo2"><br><br>
 <button>Submit demo</button>
 </div>
+
+
+</div>
+<h3>FAQs..</h3>
+<div id="select-container">
+    <div class="faqcontainer" id="1">
+    <input type="radio" id="one" name="check" aria-expanded="false">
+    <label tabindex=0 for="one">Are there other branches of Vonnue inside Kerala</label tabindex=0>
+    <div class="faqcontent">No.. The sole office of Vonnue is at Wayanad</div> 
+    </div>
+
+
+    <div class="faqcontainer" id="2"> 
+
+    <input type="radio" id="two" name="check" aria-expanded="false">
+    <label tabindex=0 for="two">Who is the CEO of Vonnue?</label tabindex=0> 
+
+    <div class="faqcontent">Allen Rintoul</div>
+    </div>
+
+
+
+    <div class="faqcontainer" id="3"> 
+
+    <input type="radio" id="three" name="check" aria-expanded="false">
+    <label tabindex=0 for="three">How many employes are in Vonnue?</label tabindex=0> 
+
+    <div class="faqcontent">Close to 200 employes work in Vonnue</div>
+    </div>
+
+
+    <div class="faqcontainer" id="4"> 
+
+    <input type="radio" id="four" name="check" aria-expanded="false">
+    <label tabindex=0 for="four">Is Vonnue close to Sulthan Bathery Town?</label tabindex=0> 
+
+    <div class="faqcontent">Yes, Vonnue is close from the town (within 1km).</div>
+    </div>
 </div>
 
 
@@ -214,5 +277,6 @@ needs, accelerate growth, and enhance operational efficiency and Leverage our ex
     <footer>
         <p><em>Created for educational purposes only</em></p>
     </footer>
+    </div>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -22,36 +22,59 @@
     <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9fi1X-2LTp4uDwt6PGq8p9LUmB8_YIUsiHZwf71DoZg&s=10">
 
     
+     
+    <script src="js/components/gallery.js"  type="module"></script>
+    <script src="js/components/blog.js" type="module">  </script>
+    <script src="js/main.js" type="module"></script>
 
-        
-    
 </head>
 
 <body id="team">
     <header>
+        <div id="indicator"></div>
     <nav aria-label="Navigation">
         <div class="nav-bar-container">
             
-            <div class="tab"><a href="index.html" aria-current="page">Home</a></div>
-            <div class="tab"><a href="about.html">About</a></div>
-            <div class="tab"><a href="contact.html">Contact</a></div>
-            <div class="tab"><a href="services.html">Services</a></div>
-            <div class="tab"><a href="team.html">Team</a></div>
+             <div class="tab" id="hamburgerdiv"  aria-expanded="false"><button href="#" id="hamburger"> ≡ 
+ 
+            </button> 
+        </div>
+            <div class="center-nav" id="close"> 
+                <div class="tab"><a href="index.html">Home</a></div>
+                <div class="tab"><a href="about.html" id="temp">About</a></div>
+                <div class="tab"><a href="contact.html">Contact</a></div>
+                <div class="tab"><a href="services.html">Services</a></div>
+                <div class="tab"><a href="team.html">Team</a></div>
+                <div class="tab"><a href="blog.html">Blog</a></div>
+            </div>
+                      <div class="theme-div" ><button id="toggle_btn" aria-pressed="dark-mode">🌙</button></div>
 
         </div>
-    </nav></header>
+        
+    </nav>
+    </header>
+    <div id="mainoverlay-off"> 
+        <button id="down">⇑</button>
     <main id="main-team">
+        <div id="overlay">
+            <button id="closeimage">X</button>
+            <button id="leftarrow">&lt;</button>
+            <div id="displayimage"></div>
+            <button id="rightarrow">&gt;</button>
+        </div>
         <div class="filter">
             <a href="#dev">Development Team</a>
             <a href="#qa">Q/A Team</a>
+            <a href="#fetchuser_cards" id="api_user">API team</a>
             <a href="#hide">Hide Team</a>
         </div>
             <h1>Team</h1>
            <h2>Development Team </h2>
+        
         <section class="dev-grid" id="dev">
      
         <figure>
-            <img src="images/download(1).jpeg" alt="Image Unavailable" width="200" height="200">
+            <img src="images/download(1).jpeg" alt="Image Unavailable" width="200" height="200" class="gallery" class="gallery">
             <figcaption><h3>Annie James </h3>
                 <p class="bio">Cheif Executive Officer<br>She is the core engine of our team.</p>
 
@@ -62,7 +85,7 @@
         </figure>
         
         <figure>
-            <img src="images/download(2).jpeg" alt="Image Unavailable" width="200" height="200">
+            <img src="images/download(2).jpeg" alt="Image Unavailable" width="200" height="200" class="gallery">
             <figcaption><h3>Frank Job </h3>
                 <p class="bio">Senior Developer<br>15+ Years experience across all domain</p>
                         <div class="icon-row">
@@ -70,28 +93,28 @@
             </div></figcaption>
         </figure>
         <figure>
-            <img src="images/download.jpeg" alt="Image Unavailable" width="200" height="200">
+            <img src="images/download.jpeg" alt="Image Unavailable" width="200" height="200" class="gallery">
             <figcaption><h3>Jamesion Carpenter </h3>
                 <p class="bio">Project Lead<br>Masters in Buisness administration and a excellent team manager</p>            <div class="icon-row">
                 <img src="images/0insta.png" alt="ig-logo"  > <img src="images/0facebook.png" alt="facebook-logo">  <img src="images/0youtube.png" alt="you">
             </div></figcaption>
         </figure>
         <figure>
-            <img src="images/download(3).jpeg" alt="Image Unavailable" width="200" height="200">
+            <img src="images/download(3).jpeg" alt="Image Unavailable" width="200" height="200" class="gallery">
             <figcaption><h3>Job Mathew </h3>
                 <p class="bio">Developer<br>10+ Years experience across all domain</p>            <div class="icon-row">
                 <img src="images/0insta.png" alt="ig-logo"  > <img src="images/0facebook.png" alt="facebook-logo">  <img src="images/0youtube.png" alt="you">
             </div></figcaption>
         </figure>
         <figure>
-            <img src="images/download(4).jpeg" alt="Image Unavailable" width="200" height="200">
+            <img src="images/download(4).jpeg" alt="Image Unavailable" width="200" height="200" class="gallery">
             <figcaption><h3>Emilia Clark </h3>
                 <p class="bio"> Developer<br>10+ Years experience in Design Services</p>            <div class="icon-row">
                 <img src="images/0insta.png" alt="ig-logo"  > <img src="images/0facebook.png" alt="facebook-logo">  <img src="images/0youtube.png" alt="you">
             </div></figcaption>
         </figure>
         <figure>
-            <img src="images/download(5).jpeg" alt="Image Unavailable" width="200" height="200">
+            <img src="images/download(5).jpeg" alt="Image Unavailable" width="200" height="200" class="gallery">
             <figcaption><h3>Sarah Mathews</h3>
                 <p class="bio">Junior Developer<br>5+ Years experience in Sofware development</p>            <div class="icon-row">
                 <img src="images/0insta.png" alt="ig-logo"  > <img src="images/0facebook.png" alt="facebook-logo">  <img src="images/0youtube.png" alt="you">
@@ -102,48 +125,52 @@
     <section class="qa-grid" id="qa">
         
         <figure>
-            <img src="images/download(11).jpeg" alt="Image Unavailable" width="200" height="200">
+            <img src="images/download(11).jpeg" alt="Image Unavailable" width="200" height="200" class="gallery">
             <figcaption><h3>James Warner </h3><p class="bio"> Cheif Buisness Analyst<br></p>            
                 <div class="icon-row">
                 <img src="images/0insta.png" alt="ig-logo"  > <img src="images/0facebook.png" alt="facebook-logo">  <img src="images/0youtube.png" alt="you">
             </div></figcaption>
         </figure>
         <figure>
-            <img src="images/download(8).jpeg" alt="Image Unavailable" width="200" height="200">
+            <img src="images/download(8).jpeg" alt="Image Unavailable" width="200" height="200" class="gallery">
             <figcaption><h3>Martin Peter </h3><p class="bio"> Senior Test Engineer</p>            <div class="icon-row">
                 <img src="images/0insta.png" alt="ig-logo"  > <img src="images/0facebook.png" alt="facebook-logo">  <img src="images/0youtube.png" alt="you">
             </div></figcaption>
         </figure>
         <figure>
-            <img src="images/download(9).jpeg" alt="Image Unavailable" width="200" height="200">
+            <img src="images/download(9).jpeg" alt="Image Unavailable" width="200" height="200" class="gallery">
             <figcaption><h3>Juile Carpenter </h3> <p class="bio">Human Resources</p>            <div class="icon-row">
                 <img src="images/0insta.png" alt="ig-logo"  > <img src="images/0facebook.png" alt="facebook-logo">  <img src="images/0youtube.png" alt="you">
             </div></figcaption>
         </figure>
         <figure>
-            <img src="images/download(10).jpeg" alt="Image Unavailable" width="200" height="200">
+            <img src="images/download(10).jpeg" alt="Image Unavailable" width="200" height="200" class="gallery">
             <figcaption><h3>Stella Martin </h3> <p class="bio">Call Support Manager</p>            <div class="icon-row">
                 <img src="images/0insta.png" alt="ig-logo"  > <img src="images/0facebook.png" alt="facebook-logo">  <img src="images/0youtube.png" alt="you">
             </div></figcaption>
         </figure>
         <figure>
-            <img src="images/download(7).jpeg" alt="Image Unavailable" width="200" height="200">
+            <img src="images/download(7).jpeg" alt="Image Unavailable" width="200" height="200" class="gallery">
             <figcaption><h3>Muhammed Yusif </h3><p class="bio"> Operations Team Lead</p>            <div class="icon-row">
                 <img src="images/0insta.png" alt="ig-logo"  > <img src="images/0facebook.png" alt="facebook-logo">  <img src="images/0youtube.png" alt="you">
             </div></figcaption>
         </figure>
         <figure>
-            <img src="images/download(6).jpeg" alt="Image Unavailable" width="200" height="200">
+            <img src="images/download(6).jpeg" alt="Image Unavailable" width="200" height="200" class="gallery">
             <figcaption><h3>Mathew Sony</h3> <p class="bio">Buisness Analyst</p>            <div class="icon-row">
                 <img src="images/0insta.png" alt="ig-logo"  > <img src="images/0facebook.png" alt="facebook-logo">  <img src="images/0youtube.png" alt="you">
             </div></figcaption>
         </figure>
     </section>
-        
+    
+    <h2>API Team </h2>
+    <section class="api-grid" id="fetchuser_cards">
+    </section>
     </main>
      <footer>
         <p><em>Created for educational purposes only</em>
         <br><em>All persons above are Ai generated images who does not exist</em></p>
     </footer>
+    </div>
 </body>
 </html>

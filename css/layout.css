@@ -16,11 +16,12 @@ rules), and main.css that imports all four using @import */
 .features{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 10% 1fr;
+    grid-template-rows: 20% 1fr;
+    max-width: 99vw;
     gap: 15px;
     background : linear-gradient(to bottom, var(--home-gradient), transparent);
     width: 100vw;
-    height: 200px;
+    height: max-content;
     text-align: center;
 }
 
@@ -31,7 +32,15 @@ rules), and main.css that imports all four using @import */
     text-decoration: var(--blue-border); 
 }
 
+nav{
+    max-width: 100%;
+}
+
 .nav-bar-container{
+    max-width: 99vw;
+}
+
+.nav-bar-container,.center-nav{
     display: flex;
     min-height: 50px;
     align-items: center;
@@ -39,9 +48,22 @@ rules), and main.css that imports all four using @import */
 
 }
 
-footer{
-    padding-top: 50px;
-    text-align: center;
+.theme-div{
+    min-width: 70px;
+}
+
+.theme-div button{
+    width: 35px;
+    height: 35px;
+    border : transparent;
+    background-color: transparent;
+    font-size: larger;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.theme-div button:hover{
+    background-color: black;
 }
 
 header{
@@ -50,7 +72,7 @@ header{
 }
 
 .tab{
-    width: 20vw;
+    width: 15vw;
     text-align: center;
 }
 
@@ -63,10 +85,14 @@ header{
     padding-bottom: 10px;
 }
 
+#home{
+    font-size: 20px;
+}
 
 .testimonials{
     display: flex;
     flex-wrap: wrap;
+    margin-top: 5vh;
 }
 
 .testimonials div{
@@ -137,13 +163,6 @@ dt{
 
 /*********************************************** Services **************/
 
-#services header nav{
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    width: 100%;
-    min-height: 60px;
-}
-
 #services h1{
     text-align: center;
 }
@@ -155,7 +174,7 @@ dt{
 #services .navitem{
     padding-top: 20px;
     text-align: center;
-    border: solid 1px #8080804f;
+    border: solid 1px var(--dim-black);
 }
 
 #services body{
@@ -166,7 +185,6 @@ dt{
 #services #article-three-design{
     padding-top: 20px;
     padding-bottom: 10px;
-    grid-area: article-three-design;
     border: solid 1px #80808070;
     border-radius: 30px; 
 }
@@ -175,6 +193,16 @@ dt{
     box-shadow: 2px 2px 6px 3px var(--accent1);
 }
 
+.content{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border: solid 1px #80808070;
+    border-radius: 30px; 
+}
+
+.content:hover{
+    box-shadow: 2px 2px 6px 3px var(--accent1);
+}
 
 #services #article-two-custom{
      padding-top: 20px;
@@ -199,7 +227,23 @@ dt{
 #services #article-one-mvp:hover{
 box-shadow: 2px 2px 6px 3px  var(--accent1);
 }
- 
+
+.load{
+border-radius: 30px;
+height: 194px;
+width: 100%;
+animation-name: skeleton;
+animation-duration: 1.5s;
+animation-iteration-count: infinite;
+background-color: var(--dim-white);
+opacity: 0.2;
+}
+
+@keyframes skeleton {
+50%{
+opacity: 0.16;
+}
+}
 
 
 /* Imported from minimal-css */
@@ -207,7 +251,7 @@ box-shadow: 2px 2px 6px 3px  var(--accent1);
 
 #services table {
   border-collapse: collapse;
-  border: 2px solid #80808070;
+  border: 2px solid var(--dim-black);
   letter-spacing: 1px;
   font-size: 0.8rem;
   margin-left: clamp(30px,30%,2000px);
@@ -261,4 +305,127 @@ tr:nth-child(odd) td:nth-child(3){
     color : var(--black);
     font-weight: bold;
 }
+
+#hamburgerdiv{
+        display: none;
+}
+
+#hamburgerdiv button{
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 20px;
+}
+
+/* 
+#overlay_open{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dim-black);
+} */
+#home{
+    overflow:scroll;
+}
+
+#mainoverlay-on{
+    background-color: var(--dim-black);
+}
+
+#mainoverlay-off{
+    background-color: none;
+}
+
+@media (width<600px){
+    .theme-div{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+    }
+
+    .nav-bar-container{
+    position: relative;
+        }
+
+    .features{
+        grid-template-rows: repeat(4,1fr);
+        grid-template-columns: 1fr !important;
+        height: max-content;
+    }
+
+    .testimonials{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #features-hero-heading{
+        grid-column: span 1;
+    }
+
+    .center-nav{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 20px;
+
+        /* display: none; */
+    }
+
+    #open{
+        display: flex;
+    }
+
+    #close{
+        display: none;
+    }
+
+    #hamburgerdiv,.nav-bar-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+.faqcontent{
+    border: solid 0.2px var(--accent2);
+    overflow: hidden;
+    height: 0;
+   
+    /* border: solid 2px green; */
+}
+
+.faqcontainer{
+    margin: 30px;
+}
+
+input:checked ~ .faqcontent{
+    height: 30px !important;
+}
+
+#down{
+    display: none;
+    font-size: 30px;
+    position: fixed;
+    bottom: 60px;
+    margin-left: 50%;
+    z-index: 100;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: rgb(119 126 126 / 51.2%);
+    border: none;
+}
+
+#indicator{
+    height: 5px;
+    width: 0;
+    background-color: cornflowerblue;
+}
+
 

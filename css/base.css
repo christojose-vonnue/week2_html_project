@@ -25,25 +25,62 @@ rules), and main.css that imports all four using @import */
     padding: 0;
 }
 
+html{
+    color-scheme: dark light;
+}
 
 p{
     font-size: larger;
 }
 
-:root{
+
+
+[data-theme='dark']{
     --black:#000;
     --white:#fff;
     --blue-border:#8484E1;
     --home-gradient:#4f0f55b3;
     --nav-gradient:#167392;
     --nav-gradient-2:#0D3C4A;
+    --dim-white: #ffffffbe;
     --accent1:cyan;
     --accent2:violet;
     --accent3:#fa8072;
     --table-stripe:#4f522b96;
     --table-feature1:#504f4985;
     --table-feature2:#3f3a21;
+    --light-black:#312526;
+    --dim-black:#8080804f;
+    --required-green:#51ff00;
+    --light-green:#c4e4b4;
+    --orange:#eba83d;
+    --light-orange:#fccc8d;
+    --cyan:cyan;
 }
+
+[data-theme='light']{
+    --black:#fff;
+    --white:#000;
+    --blue-border:#7B7B1E;
+    --home-gradient:#B0F0AAb3;
+    --nav-gradient:#E98C6D;
+    --nav-gradient-2:#F2C3B5;
+    --dim-white: #140e0ebe;
+    --accent1:#F00;
+    --accent2:#117811;
+    --accent3:#057F8D;
+    --table-stripe:#B0ADD496;
+    --table-feature1:#AFB0B685;
+    --table-feature2:#C0C5DE;
+    --light-black:#CEDAD9;
+    --dim-black:#7F7F7F4f;
+    --required-green:#AE00FF;
+    --light-green:#3B1B4B;
+    --orange:#1457C2;
+    --light-orange:#033372;
+    --cyan:#F00;
+}
+
 
 
 @font-face{
@@ -63,20 +100,23 @@ p{
 
 body{
     background-color: var(--black);
-    color : white;
-  
+    color : var(--white);
 }
 
-a{ color: aqua;}
+html{
+    scroll-behavior: smooth;
+}
+
+a{ color: var(--cyan);}
 
 .nav-bar-container a{
-    color: white;
+    color: var(--white);
     font-size: 18px;
     text-decoration: none;
 }
 
 
-a:hover{color : violet}
+a:hover{color : var(--accent2)}
 
 /* 
 274.​ Move your design system custom properties and type scale into base.css */

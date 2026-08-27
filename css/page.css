@@ -2,6 +2,11 @@
 footer, grid structure), components.css (cards, buttons, forms, badges), pages.css (page-specific
 rules), and main.css that imports all four using @import */
 
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+
 #team header nav ul {
     list-style-type:none;
     padding: 0;
@@ -15,19 +20,19 @@ rules), and main.css that imports all four using @import */
 #team hr{border-width: 2px;}
 
 #team article hr{ border:none;
-            border-top: 1px dashed #312526;}
+            border-top: 1px dashed var(--light-black);}
 
 #team body{
-    background-color: black;
-    color: aliceblue;
+    background-color: var(--black);
+    color: var(--white);
 }
 
 #team a{
-    color:#fcfcfc
+    color:var(--white);
 }
 
 #team a:hover{
-    color:#ee82ee;
+    color:var(--accent2);
 }
 
 #team h1{
@@ -36,16 +41,16 @@ rules), and main.css that imports all four using @import */
 
 
 #team .features em{
-    color:  #eba73b;
+    color:  var(--orange);
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #team .features h3{
-    color : #fccc8e;
+    color : var(--light-orange);
 }
 
 #team .testimonials h2{
-    color: #5fe241;
+    color: var(--required-green);
 }
 
 #team .testimonials h3{
@@ -100,13 +105,20 @@ caption {
     animation-fill-mode: forwards;
 }
 
+#team .api-grid figure:hover{
+    animation-name: box-lift;
+    animation-duration: .5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
 
 #team figure img{
     border-radius: 50%;  /* 254 : Circular Radius */
 }
 
 #team .required {
-    color:#51ff00;
+    color:var(--required-green);
 }
 
 #team textarea{
@@ -152,6 +164,8 @@ caption {
 
 * */
 
+
+
 #team .dev-grid{
     display: none;
     grid-template-columns: repeat(4,1fr);
@@ -174,6 +188,17 @@ caption {
     text-align: center;
 }
 
+#team .api-grid{
+    display: none;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    text-align: center;
+}
+
+#fetchuser_cards:target{
+    display: grid;
+}
+
 #team .filter{
     margin-left: clamp(10px,30vw,1000px);
     display: flex;
@@ -187,13 +212,13 @@ caption {
     text-decoration: none;
     padding: 8px 10px;
     border-radius: 16px;
-    background-color: cyan;
-    color: black;
+    background-color: var(--accent1);
+    color: var(--black);
     text-align: center;
 }
 
 #team .filter a:hover{
-    background-color: #ffffffbe;
+    background-color: var(--dim-white);
 }
 
 #team #dev:target{
@@ -208,13 +233,13 @@ caption {
 
 @keyframes box-lift {
     100%{ 
-        box-shadow: 0 0 4px 4px tan;
+        box-shadow: 0 0 4px 4px var(--accent3);
     }
 }
 
 
 @media ( width < 1140px ){
-#team .dev-grid,#team .qa-grid{
+#team .dev-grid,#team .qa-grid,.api-grid{
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(3,1fr);
 }
@@ -235,7 +260,7 @@ caption {
 
 
 @media ( width < 570px ){
-#team .dev-grid,#team .qa-grid{
+#team .dev-grid,#team .qa-grid,.api-grid{
     grid-template-columns: repeat(1,1fr);
     grid-template-rows: repeat(6,1fr);
 }
@@ -245,7 +270,88 @@ caption {
 }
 }
 
+#team #overlay{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--dim-white);
+    top: 0;
+    z-index: -10;
+    transition: 400ms ease;
+    opacity: 0;
+}
 
+ #team #overlay.smooth{
+    transition: 400ms ease;
+    opacity: 1;
+    height: 100vh;
+    z-index: 100;
+}
+
+#leftarrow,#rightarrow{
+    font-size: 120px;
+
+    /* padding-block: 5px; */
+    padding-inline: 20px;
+    margin: 40px;
+    font-weight: 100;
+    color: var(--home-gradient);
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+}
+
+#leftarrow:hover,#rightarrow:hover{
+    cursor: pointer;
+    color: var(--light-black);
+}
+
+#leftarrow:active,#rightarrow:active{
+    background-color: var(--light-orange);
+}
+
+#closeimage{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgb(175 16 16);
+    color: white;
+    border: solid 0.4px white;
+    font-size: 30px;
+}
+
+.fadein{
+    animation-name:fadeinnow;
+    animation-duration: 2s;
+    opacity: 1.0;
+}
+
+@keyframes fadeinnow {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.fadeout{
+    animation-name:fadein;
+    animation-duration: 2s;
+    opacity: 0;
+}
+
+@keyframes fadein {
+    100%{
+        opacity: 0.2;
+    }
+}
 
 @media (prefers-reduced-motion: no-preference) {
 #about-h1{
@@ -260,8 +366,10 @@ caption {
     animation-duration:3s;
     animation-timing-function:ease-in;
     animation-iteration-count: 1;
-    animation-delay: 2s;
-    animation-fill-mode: backwards;
+
+    /* animation-delay: 2s; */
+
+    /* animation-fill-mode: backwards; */
 }
 
 .timeline{
@@ -269,8 +377,10 @@ caption {
     animation-duration:3s;
     animation-timing-function:ease;
     animation-iteration-count: 1;
-    animation-delay: 5s;
-    animation-fill-mode: backwards;
+
+    /* animation-delay: 5s; */
+
+    /* animation-fill-mode: backwards; */
 }
 
 #pull-quote{
@@ -278,8 +388,10 @@ caption {
     animation-duration:3s;
     animation-timing-function:ease;
     animation-iteration-count: 1;
-    animation-delay: 8s;
-    animation-fill-mode: backwards;
+
+    /* animation-delay: 8s; */
+
+    /* animation-fill-mode: backwards; */
 }
 
 #about-main{
@@ -287,8 +399,10 @@ caption {
     animation-duration:3s;
     animation-timing-function:ease;
     animation-iteration-count: 1;
-    animation-delay: 11s;
-    animation-fill-mode: backwards;
+
+    /* animation-delay: 11s; */
+
+    /* animation-fill-mode: backwards; */
 }
 
 #about-footer{
@@ -296,8 +410,10 @@ caption {
     animation-duration:3s;
     animation-timing-function:ease;
     animation-iteration-count: 1;
-    animation-delay: 14s;
-    animation-fill-mode: backwards;   
+
+    /* animation-delay: 14s; */
+
+    /* animation-fill-mode: backwards;    */
 }
 
 #contact-main{
@@ -328,14 +444,21 @@ caption {
     animation-iteration-count: 1;  
 }
 
+#pullquote{
+                  animation-name: fade-in;
+    animation-duration:2s;
+    animation-timing-function:ease;
+    animation-iteration-count: 1;  
+}
+
 @keyframes fade-in{
     0%{
-        translate : 0 100vh;
+        /* translate : 0 100vh; */
         opacity: 0;
     }
 
     100%{
-        translate: 0 0;
+        /* translate: 0 0; */
         opacity: 1.0;
     }
 }

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample document</title>
+    <link href="css/main.css" rel="stylesheet">
+    <script src="js/components/blog.js" type="module">  </script>
+    <script src="js/main.js" type="module"></script>
+    
+    <style>
+
+        body{
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            position: relative;
+        }
+        header{
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        h1{
+            /* padding-top: 80px; */
+            text-align: center;
+        }
+        .article-container{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+          justify-content: center;  
+          gap:70px;
+          background-color: var(--white);
+        }
+        section{
+            margin-top: 30px;
+             margin-bottom: 30px;
+            width: 60%;
+            border: double 2px var(--white);
+            padding: 30px;  
+            background-color: var(--light-black);
+            border-top-left-radius: 60px;
+            border-bottom-right-radius: 60px;
+        }
+        #two{
+           background-color: var(--accent3); 
+        }
+        .articles{
+            opacity: 0.05;
+            translate: -300px 0;   
+        }
+        .articles.visible{
+            transition: 1s ease;
+            translate: 0 0; 
+            opacity: 1;
+            
+        }
+        #indicator{
+            height: 5px;
+            width: 0;
+            background-color: cornflowerblue;
+        }
+        #a6{
+            margin-bottom: 200px;
+        }
+        #down:hover{
+            border: solid 2px rgba(165, 42, 42, 0.678);
+            /* background-color: var(--black); */
+         
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav aria-label="Navigation">
+            <div class="nav-bar-container">
+                
+                <div class="tab" id="hamburgerdiv"  aria-expanded="false"><button href="#" id="hamburger"> ≡ 
+ 
+                </button> 
+            </div>
+            <div class="center-nav" id="close"> 
+                <div class="tab"><a href="index.html">Home</a></div>
+                <div class="tab"><a href="about.html" id="temp">About</a></div>
+                <div class="tab"><a href="contact.html">Contact</a></div>
+                <div class="tab"><a href="services.html">Services</a></div>
+                <div class="tab"><a href="team.html">Team</a></div>
+                <div class="tab"><a href="blog.html">Blog</a></div>
+            </div>
+            <div class="theme-div" ><button id="toggle_btn" aria-pressed="dark-mode">🌙</button></div>
+            
+        </div>
+        
+    </nav>
+    <div id="indicator"></div>
+    </header>
+    <div id="mainoverlay-off"> 
+    <main>
+        <h1>Aricles are below</h1>
+        <button id="down">⇑</button>
+        <article class="article-container">
+        <section class="articles" id="1">
+            <h2>Introduction</h2>
+            YouTube is undoubtedly the biggest video platform out there. There are about 2.1 billion YouTube users worldwide,
+             out of 5 billion people who access the internet. So, in short, it’s a pretty big deal. For most of us, it’s our daily source of entertainment, and for some their source of income. It has truly become a big part of our life, recent years has seen a rise in the number of millionaires only due to the platform. So, stay tuned for this brief history of YouTube.
+        </section>
+        <section class="articles" id="2">
+            <h2>History</h2>
+        On February 14, 2005, Chad Hurley, Steve Chen, and Jawed Karim founded YouTube as an online video-sharing platform. YouTube’s creators aimed to make it simple for individuals to publish and distribute videos globally. Before the introduction of YouTube, there were no viable online video-sharing platforms. Therefore, Chad Hurley, Steve Chen, and Jawed Karim devised a plan to create a website where individuals could share online recordings of their lovely experiences.
+        </section>
+        
+        <section class="articles" id="3">
+            <h2>Breakthrough</h2>
+            The viral video that contributed to YouTube breaking this record was a Nike advertisement depicting Brazilian soccer star Ronaldinho collecting his Golden Boots. In September 2005, the video received its first million views. This attracted not just many views but also Nike’s understanding of YouTube’s advertising potential.
+        </section>
+        </article><br><br>
+        <article class="article-container" id="two">
+        <section class="articles" id="4">
+            <h2>Introduction</h2>
+            YouTube is undoubtedly the biggest video platform out there. There are about 2.1 billion YouTube users worldwide,
+             out of 5 billion people who access the internet. So, in short, it’s a pretty big deal. For most of us, it’s our daily source of entertainment, and for some their source of income. It has truly become a big part of our life, recent years has seen a rise in the number of millionaires only due to the platform. So, stay tuned for this brief history of YouTube.
+        </section>
+        <section class="articles" id="5">
+            <h2>History</h2>
+        On February 14, 2005, Chad Hurley, Steve Chen, and Jawed Karim founded YouTube as an online video-sharing platform. YouTube’s creators aimed to make it simple for individuals to publish and distribute videos globally. Before the introduction of YouTube, there were no viable online video-sharing platforms. Therefore, Chad Hurley, Steve Chen, and Jawed Karim devised a plan to create a website where individuals could share online recordings of their lovely experiences.
+        </section>
+        <section class="articles" id="a6">
+            <h2>Breakthrough</h2>
+            The viral video that contributed to YouTube breaking this record was a Nike advertisement depicting Brazilian soccer star Ronaldinho collecting his Golden Boots. In September 2005, the video received its first million views. This attracted not just many views but also Nike’s understanding of YouTube’s advertising potential.
+        </section>
+        </article>
+        
+    </main>
+    </div>  
+</body>
+</html>
